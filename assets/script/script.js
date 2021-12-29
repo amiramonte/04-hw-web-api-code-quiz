@@ -32,24 +32,24 @@ startQuizButtonEl.addEventListener("click", buildQuiz);
 
 let quizQuestions = [
     {
-        question: "",
+        question: "The function and var are known as what in javascript?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
+            a: "Arrays",
+            b: "booleans",
+            c: "Declaration Statements",
+            d: "Data Types",
         },
-        correctAnswer: ""
+        correctAnswer: "c"
     },
     {
-        question: "",
+        question: "In Javascript, what does x === y mean?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
+            a: "Both x and y are equal in value only",
+            b: "Both x and y are equal in type only",
+            c: "Both x and y are equal in value but not type",
+            d: "Both x and y are equal in value and type",
         },
-        correctAnswer: ""
+        correctAnswer: "d"
     },
     {
         question: "",
