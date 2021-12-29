@@ -5,6 +5,11 @@ let resultsZoneEl = document.querySelector("#results-zone");
 let startQuizButtonEl = document.querySelector("start-quiz");
 
 
+
+questionZoneEl.style.display = "none";
+resultsZoneEl.style.display = "none";
+
+
 // Functions
 
 function buildQuiz() {
@@ -23,6 +28,107 @@ startQuizButtonEl.addEventListener("click", buildQuiz);
 
 
 
+// Quiz Questions
 
-questionZoneEl.style.display = "none";
-resultsZoneEl.style.display = "none";
+let quizQuestions = [
+    {
+        question: "",
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctAnswer: ""
+    },
+    {
+        question: "",
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctAnswer: ""
+    },
+    {
+        question: "",
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctAnswer: ""
+    },
+    {
+        question: "",
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctAnswer: ""
+    },
+    {
+        question: "",
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctAnswer: ""
+    },
+    {
+        question: "",
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctAnswer: ""
+    },
+    {
+        question: "",
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctAnswer: ""
+    },
+    {
+        question: "",
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctAnswer: ""
+    },
+    {
+        question: "",
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctAnswer: ""
+    },
+    {
+        question: "",
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: "",
+        },
+        correctAnswer: ""
+    },
+]
