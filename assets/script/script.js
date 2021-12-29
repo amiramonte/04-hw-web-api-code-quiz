@@ -17,7 +17,7 @@ let countDownTimer = setInterval(function() {
         clearInterval(countDownTimer);
         document.querySelector("#timer").textContent = "Time Is Up!";
     } else {
-        document.querySelector("#timer").textContent = timeLeft + " seconds remaining";
+        document.querySelector("#timer").textContent = "Timer: " + timeLeft + " seconds remaining";
     }
     timeLeft -= 1;
 }, 1000);
