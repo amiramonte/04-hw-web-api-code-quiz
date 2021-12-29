@@ -9,10 +9,31 @@ let startQuizButtonEl = document.querySelector("start-quiz");
 questionZoneEl.style.display = "none";
 resultsZoneEl.style.display = "none";
 
+// Countdown Timer
+
+let timeLeft = 60;
+let countDownTimer = setInterval(function() {
+    if(timeLeft <= 0) {
+        clearInterval(countDownTimer);
+        document.querySelector("#timer").textContent = "Time Is Up!";
+    } else {
+        document.querySelector("#timer").textContent = timeLeft + " seconds remaining";
+    }
+    timeLeft -= 1;
+}, 1000);
+
+
+
+
+
+
+
 
 // Functions
 
 function buildQuiz() {
+    let output = [];
+
 
 }
 
@@ -23,6 +44,7 @@ function showHighScores() {
 // Eventlisteners for button clicks
 
 startQuizButtonEl.addEventListener("click", buildQuiz);
+startQuizButtonEl.addEventListener("click", countDownTimer);
 
 
 
