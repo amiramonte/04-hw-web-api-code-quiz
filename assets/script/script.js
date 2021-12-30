@@ -40,7 +40,7 @@ let questions = [
 
 
 function startQuiz() {
-    countDownTimer = setInterval(clockTick, 1000)
+    countDownTimer = setInterval(clockTick, 1000);
     startQuizZoneEl.style.display = "none";
     questionZoneEl.style.display = "block";
     generateQuestion();
@@ -80,6 +80,7 @@ function validateAnswer() {
         questionIndex ++;
     } else {
         questionIndex ++;
+        timeLeft -= 10;
         //subtract time from running timer
         //
     }
