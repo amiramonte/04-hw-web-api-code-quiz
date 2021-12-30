@@ -12,7 +12,6 @@ questionZoneEl.style.display = "none";
 resultsZoneEl.style.display = "none";
 
 
-// Countdown Timer
 
 let timeLeft = 60;
 let countDownTimer;
@@ -73,7 +72,17 @@ function generateQuestion() {
 
 function validateAnswer() {
     let selectedAnswer = this.value;
+    // console.log(selectedAnswer);
     let correctAnswer = questions[questionIndex].answer;
+    if (selectedAnswer === correctAnswer) {
+        // add proper local storage here - record this information
+        // create 
+        questionIndex ++;
+    } else {
+        questionIndex ++;
+        //subtract time from running timer
+        //
+    }
 }
 
 function endQuiz() {}
