@@ -5,6 +5,9 @@ let resultsZoneEl = document.querySelector("#results-zone");
 let startQuizButtonEl = document.querySelector("#start-quiz");
 let questionTitleEl = document.querySelector("#question-title");
 let buttonZoneEl = document.querySelector("#button-zone");
+let finalScoreEl = document.querySelector("#final-score");
+let initialsEl = document.querySelector("#initials");
+let submitButton = document.querySelector("#submit-button");
 
 
 
@@ -33,6 +36,27 @@ let questions = [
         ],
         answer: "3",
     },
+    {
+        title: "What is 4 + 5?",
+        choices: [
+            "1", "2", "3", "4"
+        ],
+        answer: "3",
+    },
+    {
+        title: "What is 3 + 23?",
+        choices: [
+            "1", "2", "3", "4"
+        ],
+        answer: "3",
+    },
+    {
+        title: "What is 5 + 9?",
+        choices: [
+            "1", "2", "3", "4"
+        ],
+        answer: "3",
+    },
 ];
 
 
@@ -49,8 +73,8 @@ function startQuiz() {
 function clockTick() {
     timeLeft--;
     if(timeLeft <= 0) {
-        clearInterval(countDownTimer);
         document.querySelector("#timer").textContent = "Time Is Up!";
+        endQuiz();
     } else {
         document.querySelector("#timer").textContent = "Timer: " + timeLeft + " seconds remaining";
     }
@@ -60,6 +84,7 @@ function clockTick() {
 function generateQuestion() {
     let currentQuestion = questions[questionIndex]
     questionTitleEl.textContent = currentQuestion.title;
+    buttonZoneEl.innerHTML = "";
     currentQuestion.choices.forEach(function(choice) {
         let tempBtn = document.createElement("button");
         tempBtn.textContent = choice;
@@ -74,19 +99,37 @@ function validateAnswer() {
     let selectedAnswer = this.value;
     // console.log(selectedAnswer);
     let correctAnswer = questions[questionIndex].answer;
-    if (selectedAnswer === correctAnswer) {
-        // add proper local storage here - record this information
-        // create 
-        questionIndex ++;
-    } else {
-        questionIndex ++;
+
+    if (selectedAnswer !== correctAnswer) {
         timeLeft -= 10;
-        //subtract time from running timer
-        //
+    }
+    questionIndex ++;
+
+    if (questionIndex < questions.length) {
+        generateQuestion();
+    } else {
+        endQuiz();
     }
 }
 
-function endQuiz() {}
+function endQuiz() {
+    clearInterval(countDownTimer);
+    questionZoneEl.style.display = "none";
+    resultsZoneEl.style.display = "block";
+    finalScoreEl.textContent = timeLeft;
+}
+
+function saveHighScore() {
+    let initials = initialsEl.value.trim();
+    let newScore = {
+        initials: initials, 
+        score: timeLeft
+    }
+    let currentHighScores = JSON.parse(localStorage.getItem("highscores")) || []
+    currentHighScores.push(newScore);
+    localStorage.setItem("highscores", JSON.stringify(currentHighScores));
+
+}
 
 
 
@@ -94,6 +137,7 @@ function endQuiz() {}
 // Eventlisteners for button clicks
 
 startQuizButtonEl.addEventListener("click", startQuiz);
+submitButton.addEventListener("click", saveHighScore);
 
 
 
@@ -109,15 +153,3 @@ startQuizButtonEl.addEventListener("click", startQuiz);
 
 
 
-
-// write 5 multiple choice questions
-// Get quiz question to populate in the "question-title" section of "question-zone"
-// have multiple choice answers populate in the "button-zone" of the "question-zone"
-// have each multiple choice answer populate in the "button-zone" as a button
-// have a 'right' or 'wrong' notification populate underneath the 4 multiple choice answers when the right or wrong answer is chosen by the user
-// once user selects right or wrong answer, move to the next question
-// at end of the 5th question, move to the "results-zone" after user chooses an answer
-// after user submits initials on "results-zone" page, move to high scores html page
-// user's score and initials should be pushed to local storage
-// high scores page should have a 'Go Back' button to redirect to beginning of questions or "question-zone" section
-// high scores page should have a 'Reset High scores' button to clear local storage
