@@ -11,6 +11,8 @@ let submitButton = document.querySelector("#submit-button");
 
 
 
+
+
 questionZoneEl.style.display = "none";
 resultsZoneEl.style.display = "none";
 
@@ -138,3 +140,4 @@ function saveHighScore() {
 
 startQuizButtonEl.addEventListener("click", startQuiz);
 submitButton.addEventListener("click", saveHighScore);
+
