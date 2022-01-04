@@ -128,7 +128,7 @@ function saveHighScore() {
     let currentHighScores = JSON.parse(localStorage.getItem("highscores")) || []
     currentHighScores.push(newScore);
     localStorage.setItem("highscores", JSON.stringify(currentHighScores));
-
+    window.location.href = "highscores.html";
 }
 
 
@@ -138,18 +138,3 @@ function saveHighScore() {
 
 startQuizButtonEl.addEventListener("click", startQuiz);
 submitButton.addEventListener("click", saveHighScore);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
