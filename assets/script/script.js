@@ -12,7 +12,6 @@ let submitButton = document.querySelector("#submit-button");
 
 
 
-
 questionZoneEl.style.display = "none";
 resultsZoneEl.style.display = "none";
 
@@ -131,8 +130,8 @@ function saveHighScore() {
     currentHighScores.push(newScore);
     localStorage.setItem("highscores", JSON.stringify(currentHighScores));
     window.location.href = "highscores.html";
-}
 
+}
 
 
 
