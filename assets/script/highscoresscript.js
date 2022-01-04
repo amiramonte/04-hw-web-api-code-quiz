@@ -12,7 +12,7 @@ function resetQuiz () {
 }
 
 function postScores() {
-    scoreListEl.innerHTML = localStorage.getItem("highscores", "currentHighScores");
+    scoreListEl.innerHTML = localStorage.getItem("highscores");
 }
 
 postScores();
