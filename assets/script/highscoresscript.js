@@ -1,8 +1,6 @@
 // import elements from the high scores html dom
 let resetQuizButton = document.querySelector("#reset-quiz");
 
-let scoreListEl = document.querySelector("#score-list");
-
 let resetHighScoresButton = document.querySelector("#reset-highscores");
 
 // functions
@@ -12,7 +10,12 @@ function resetQuiz () {
 }
 
 function postScores() {
-    scoreListEl.innerHTML = localStorage.getItem("highscores");
+    // set variable where json.parse local storage
+
+    // set for loop using variable declared above
+    // declare html table in html file for score-list
+    // put initials and scores headers in html table
+    // push vaules from json.parse array to appropriate places in html table
 }
 
 postScores();
