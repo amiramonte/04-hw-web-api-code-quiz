@@ -10,11 +10,8 @@ let initialsEl = document.querySelector("#initials");
 let submitButton = document.querySelector("#submit-button");
 
 
-
-
 questionZoneEl.style.display = "none";
 resultsZoneEl.style.display = "none";
-
 
 
 let timeLeft = 60;
@@ -59,22 +56,21 @@ let questions = [
         answer: "join()",
     },
     {
-        title: "Which of the following function of Array object joins all elements of an array into a string?",
+        title: "Which built-in method removes the last element from an array and returns that element?",
         choices: [
-            "concat()", "join()", "pop()", "map()"
+            "last()", "get()", "pop()", "join()"
         ],
-        answer: "join()",
+        answer: "pop()",
     },
 ];
 
 
 // Functions
 
-
 function startQuiz() {
     countDownTimer = setInterval(clockTick, 1000);
     startQuizZoneEl.style.display = "none";
-    questionZoneEl.style.display = "block";
+    questionZoneEl.style.display = "flex";
     generateQuestion();
 }
 
@@ -87,7 +83,6 @@ function clockTick() {
         document.querySelector("#timer").textContent = "Timer: " + timeLeft + " seconds remaining";
     }
 }
-
 
 function generateQuestion() {
     let currentQuestion = questions[questionIndex]
@@ -123,7 +118,7 @@ function validateAnswer() {
 function endQuiz() {
     clearInterval(countDownTimer);
     questionZoneEl.style.display = "none";
-    resultsZoneEl.style.display = "block";
+    resultsZoneEl.style.display = "flex";
     finalScoreEl.textContent = timeLeft;
 }
 
@@ -139,7 +134,6 @@ function saveHighScore() {
     window.location.href = "highscores.html";
 
 }
-
 
 
 // Eventlisteners for button clicks

@@ -3,7 +3,7 @@ let resetQuizButton = document.querySelector("#reset-quiz");
 
 let resetHighScoresButton = document.querySelector("#reset-highscores");
 
-let scoreListEl = document.querySelector("#score-list");
+let scoreTableEl = document.querySelector("#score-table");
 
 // functions
 
@@ -15,17 +15,26 @@ function postScores() {
     // set variable where json.parse local storage
     let runningScores = JSON.parse(localStorage.getItem("highscores"));  
     
+    runningScores.sort((a,b) => b.score - a.score);
 
-    
     // set for loop using variable declared above
-    for (var i = 0; i < runningScores.length; i++) {
 
+    runningScores.forEach(function(score) {
+        let tempRow = document.createElement("tr");
+        let tempInitials = document.createElement("td");
+        let tempScore = document.createElement("td");
 
-    }
+        tempInitials.textContent = score.initials;
+        tempScore.textContent = score.score;
 
+        console.log(score.score);
 
-    // put initials and scores headers in html table
-    // push vaules from json.parse array to appropriate places in html table
+        tempRow.appendChild(tempInitials);
+        tempRow.appendChild(tempScore);
+
+        scoreTableEl.append(tempRow);
+    })
+        
 }
 
 postScores();
@@ -33,7 +42,7 @@ postScores();
 
 function clearHighScores () {
     localStorage.clear();
-    scoreListEl.innerHTML = "";
+    scoreTableEl.innerHTML = "";
 }
 
 
