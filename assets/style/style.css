@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #ADEFD1FF;
 }
@@ -8,4 +14,17 @@ header {
     font-size: 25px;
     color: #ADEFD1FF;
     background-color: #00203FFF;
+    border: 20px;
+}
+
+a {
+    color: #ADEFD1FF;
+}
+
+#start-quiz-zone, #question-zone, #results-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    color: #00203FFF;
 }
