@@ -140,4 +140,3 @@ function saveHighScore() {
 
 startQuizButtonEl.addEventListener("click", startQuiz);
 submitButton.addEventListener("click", saveHighScore);
-
