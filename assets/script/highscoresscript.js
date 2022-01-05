@@ -17,7 +17,7 @@ function postScores() {
     
     runningScores.sort((a,b) => b.score - a.score);
 
-    // set for loop using variable declared above
+    // set foreach loop using variable declared above
 
     runningScores.forEach(function(score) {
         let tempRow = document.createElement("tr");
@@ -38,7 +38,6 @@ function postScores() {
 }
 
 postScores();
-
 
 function clearHighScores () {
     localStorage.clear();
