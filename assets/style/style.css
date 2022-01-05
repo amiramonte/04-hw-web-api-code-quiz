@@ -21,6 +21,10 @@ a {
     color: #ADEFD1FF;
 }
 
+p {
+    padding: 20px;
+}
+
 #start-quiz-zone, #question-zone, #results-zone {
     display: flex;
     flex-direction: column;
