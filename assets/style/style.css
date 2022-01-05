@@ -27,4 +27,37 @@ a {
     align-items: center;
     font-size: 25px;
     color: #00203FFF;
+    padding: 15px;
+}
+
+#start-quiz {
+    background-color: #00203FFF;
+    color: #ADEFD1FF;
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+
+#question-zone {
+    font-size: 40px;
+}
+
+.question-button {
+    background-color: #00203FFF;
+    color: #ADEFD1FF;
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+
+input[type=text] {
+    padding: 6px 0px 6px 0px;
+}
+
+#submit-button {
+    background-color: #00203FFF;
+    color: #ADEFD1FF;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 8px;
 }
