@@ -24,39 +24,46 @@ let questionIndex = 0
 
 let questions = [
     {
-        title: "What is the time?",
+        title: "What type of language is Javascript?",
         choices: [
-            "1", "2", "3", "4"
+            "Ojbect Oriented", "Object Based", "Both of the above", "None of the above"
         ],
-        answer: "2",
+        answer: "Object Based",
     },
     {
-        title: "What is 1 + 1?",
+        title: "You have the function highScores(). How do you properly call that function?",
         choices: [
-            "1", "2", "3", "4"
+            "highscores", "HighScores();", "highScores();", "highScores"
         ],
-        answer: "3",
+        answer: "highScores();",
     },
     {
-        title: "What is 4 + 5?",
+        title: "In Javascript, the x === y statement implies what?",
         choices: [
-            "1", "2", "3", "4"
+            "x and y are equal in value only", "x and y are not equal", "x and y are equal in both value and data type", "x and y are equal in data type but not value"
         ],
-        answer: "3",
+        answer: "x and y are equal in both value and data type",
     },
     {
-        title: "What is 3 + 23?",
+        title: "Which of the following type of variable is visible everywhere in your Javascript code?",
         choices: [
-            "1", "2", "3", "4"
+            "local variable", "global variable", "both of the above", "none of the above"
         ],
-        answer: "3",
+        answer: "global variable",
     },
     {
-        title: "What is 5 + 9?",
+        title: "Which of the following function of Array object joins all elements of an array into a string?",
         choices: [
-            "1", "2", "3", "4"
+            "concat()", "join()", "pop()", "map()"
         ],
-        answer: "3",
+        answer: "join()",
+    },
+    {
+        title: "Which of the following function of Array object joins all elements of an array into a string?",
+        choices: [
+            "concat()", "join()", "pop()", "map()"
+        ],
+        answer: "join()",
     },
 ];
 
