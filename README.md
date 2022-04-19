@@ -1,4 +1,17 @@
-# 04-hw-web-api-code-quiz
+# Javascript Code Quiz
+
+---
+
+## Table of Contents 
+
+- [Description](#description)
+- [Functionality](#functionality)
+- [Deployed Application](#deployed-application)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Credits](#credits)
+
+---
 
 ## Description
 
