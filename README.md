@@ -8,14 +8,13 @@
 - [Functionality](#functionality)
 - [Deployed Application](#deployed-application)
 - [Technologies](#technologies)
-- [Installation](#installation)
 - [Credits](#credits)
 
 ---
 
 ## Description
 
-This project was built to further my understanding of Javascript, local storage use, and dynamically updating html.
+This code quiz was built with javascript.
 
 ## User Story
 
@@ -41,7 +40,18 @@ WHEN the game is over
 THEN I can save my initials and my score
 ```
 
+---
+
+## Technologies
+
+- [JavaScript](https://www.javascript.com/)
+
+
+---
+
+
 ## Credits
 
 #### Alex Miramontes - Jr. Web Developer
+
 [Github](https://github.com/amiramonte)
