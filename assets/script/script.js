@@ -23,7 +23,7 @@ let questions = [
     {
         title: "What type of language is Javascript?",
         choices: [
-            "Ojbect Oriented", "Object Based", "Both of the above", "None of the above"
+            "Object Oriented", "Object Based", "Both of the above", "None of the above"
         ],
         answer: "Object Based",
     },
@@ -49,7 +49,7 @@ let questions = [
         answer: "global variable",
     },
     {
-        title: "Which of the following function of Array object joins all elements of an array into a string?",
+        title: "Which of the following function of array object joins all elements of an array into a string?",
         choices: [
             "concat()", "join()", "pop()", "map()"
         ],
