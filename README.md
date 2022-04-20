@@ -20,7 +20,7 @@ This code quiz was built with javascript and tracks updating high scores using l
 
 ## Functionality
 
-
+![video demonstrating code quiz](./assets/images/javascript_code_quiz_demo.gif)
 
 ---
 
