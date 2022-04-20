@@ -14,7 +14,24 @@
 
 ## Description
 
-This code quiz was built with javascript.
+This code quiz was built with javascript and tracks updating high scores using local storage.
+
+---
+
+## Functionality
+
+
+
+---
+
+## Deployed Application
+
+[Deployed Quiz via Github Pages](https://amiramonte.github.io/code-quiz/)
+
+
+---
+
+
 
 ## User Story
 
@@ -46,9 +63,7 @@ THEN I can save my initials and my score
 
 - [JavaScript](https://www.javascript.com/)
 
-
 ---
-
 
 ## Credits
 
